@@ -4,13 +4,14 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 
 
 export default class GooglePlaces extends React.Component {
-
-  dataDisplay(){
-
+  
+  dataDisplay(data, details){
+    this.setState({data, details})
   }
 
   render() {
     return (
+      <View>
       <GooglePlacesAutocomplete
         placeholder="Search"
         minLength={1} // minimum length of text to search
@@ -19,7 +20,7 @@ export default class GooglePlaces extends React.Component {
         listViewDisplayed="auto" // true/false/undefined
         fetchDetails = {true}
         renderDescription={row => row.description || row.vicinity} // custom description render
-        onPress={(data, details = null) => dataDisplay(console.log(data, details))}
+        onPress={(data, details = null) => this.dataDisplay(data, details)}
 
         getDefaultValue={() => ''}
 
@@ -58,6 +59,11 @@ export default class GooglePlaces extends React.Component {
 
         debounce={200}
       />
+    <View>
+       <Text>{this.state.data}</Text>
+       <Text>{this.state.details}</Text>
+    </View>          
+     </View>
     );
   }
 }
