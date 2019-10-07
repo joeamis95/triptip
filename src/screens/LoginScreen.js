@@ -12,7 +12,7 @@ export default class LoginScreen extends React.Component {
         <View style={SignInButton.container}>
           <Button rounded onPress={() => this.props.navigation.navigate('DrawerNavigator')}>
             <Text>
-            Complete Login
+            Complete the Login
             </Text>
           </Button>
 

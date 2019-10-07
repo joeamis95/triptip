@@ -9,8 +9,8 @@ export default class WelcomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Button title="Login" onPress={() => this.props.navigation.navigate('LoginScreen')} />
-        <Button title="Sign Up" onPress={() => this.props.navigation.navigate('SignUpScreen')} />
+        <Button title="Register Now" onPress={() => this.props.navigation.navigate('LoginScreen')} />
+        <Button title="Sign In" onPress={() => this.props.navigation.navigate('SignUpScreen')} />
       </View>
     );
   }
