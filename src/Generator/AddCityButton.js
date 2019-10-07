@@ -10,7 +10,7 @@ export default class AddCityButton extends Component {
         <Content>
           <Button rounded>
             <Text>
-Add
+Add City
             </Text>
           </Button>
         </Content>

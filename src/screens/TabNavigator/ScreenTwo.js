@@ -4,7 +4,7 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 
 
 export default class GooglePlaces extends React.Component {
-  
+
   dataDisplay(data, details){
     this.setState({data, details})
   }
@@ -39,7 +39,7 @@ export default class GooglePlaces extends React.Component {
             fontWeight: 'bold',
           },
           predefinedPlacesDescription: {
-            color: '#1faadb',
+            color: '#303075',
           },
         }}
 
@@ -52,7 +52,7 @@ export default class GooglePlaces extends React.Component {
         GooglePlacesSearchQuery={{
           // available options for GooglePlacesSearch API : https://developers.google.com/places/web-service/search
           rankby: 'distance',
-          types: 'food',
+          types: 'library',
         }}
 
         filterReverseGeocodingByTypes={['locality', 'administrative_area_level_3']} // filter the reverse geocoding results by types - ['locality', 'administrative_area_level_3'] if you want to display only cities
@@ -62,7 +62,7 @@ export default class GooglePlaces extends React.Component {
     <View>
        <Text>{this.state.data}</Text>
        <Text>{this.state.details}</Text>
-    </View>          
+    </View>
      </View>
     );
   }
