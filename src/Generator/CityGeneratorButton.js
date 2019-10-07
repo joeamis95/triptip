@@ -11,7 +11,7 @@ export default class CityGeneratorButton extends Component {
         <Content>
           <Button block>
             <Text>
-Primary
+Secondary
             </Text>
           </Button>
         </Content>
